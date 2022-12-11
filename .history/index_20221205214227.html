@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <img src="avata.jpg" alt="avatar">
+            <span class="name">LÊ hoàng quốc thanh</span>
+            <span class="age" ></span>
+            <span id="school">school: nha trang university</span>
+            <div class="major">
+                <span id = "major">Major:</span>
+                <span id = "major--name">information technology</span>
+            </div>
+        </div>
+        <button id="btn">tap to change</button>
+    </div>
+
+    <script>
+        var ages = new Date().getFullYear() - 2003;
+        var text = document.getElementsByClassName("age");
+        for(let i = 0; i < text.length; i++){
+            text[i].innerHTML = `age: ${ages}`;
+        }
+    </script>
+
+    <script>
+        const btn = document.getElementById("btn");
+        const main = document.getElementsByClassName("content");
+        btn.addEventListener("click", () => {
+            for(let i = 0; i < main.length; i++){
+                if(main[i].style.animation != null){
+                    main[i].style.animation = "rotate  4s linear  infinite";
+                    console.log( main[i].style.);
+                }
+                else{
+                    main[i].style.removeProperty("animation");
+                } 
+            }
+        })
+    </script>
+</body>
+</html>

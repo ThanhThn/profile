@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <img src="avata.jpg" alt="avatar">
+            <span class="name">LÊ hoàng quốc thanh</span>
+            <span class="age" ></span>
+        </div>
+        <button class="btn">tap to change</button>
+    </div>
+
+    <script>
+        var ages = new Date().getFullYear() - 2003;
+        var text = document.querySelector(".age");
+        console.log(Object.keys(text));
+        for(let i = 0; i < Object.keys(text).length+1; i++){
+            text[i].innerHTML = `age: ${ages}`;
+        }
+    </script>
+</body>
+</html>
